@@ -13,7 +13,7 @@ def home():
     prediction = None
     # Default values for each field (empty string at start)
     mode = gender = age = height = weight = calories = heart_rate = body_temp = ''
-
+    
     if request.method == 'POST':
         # Grab all form values and keep them
         mode = request.form['mode']
@@ -28,7 +28,7 @@ def home():
             body_temp = 38
         elif mode == 'running':
             heart_rate = 120
-            body_temp = 40
+            body_temp = 39
         else:
             heart_rate = request.form.get('heart_rate', '')
             body_temp = request.form.get('body_temp', '')
